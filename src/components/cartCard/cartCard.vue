@@ -1,12 +1,10 @@
 <template>
       <!-- card-hover-shadow  -->
-     <base-card class="card-hover"  :class="cardHoverShadow ? 'card-hover-shadow' : '' ">
-         
+     <BaseCard class="card-hover"  :class="cardHoverShadow ? 'card-hover-shadow' : '' ">
           <v-chip
             class="ma-2 p-absolute"
             color="primary"
             small
-            
           >
             56% off
           </v-chip>
@@ -14,7 +12,7 @@
             <div class="d-flex flex-column p-absolute right-0 z-1 mr-2 mt-1 card-hover-icon">
 
               
-                <!-- dialog -- modal  -->
+                
                 <v-dialog  v-model="dialog" max-width="600px">
                     <template v-slot:activator="{ on, attrs }">
                         <v-btn
@@ -26,7 +24,11 @@
                             <v-icon>mdi-eye</v-icon>
                         </v-btn>
                     </template>
-                    <base-card>
+
+
+
+                    <!-- dialog -- modal  -->
+                    <BaseCard>
                         <v-card-title>
                             <v-btn
                                 class="mt-4"
@@ -77,10 +79,11 @@
                        
                         
                         
-                    </base-card>
+                    </BaseCard>
                 </v-dialog>
 
                 <!-- end dialog end modal  -->
+                
                 <v-btn
                     icon
                     color="secondary"
@@ -147,10 +150,13 @@
           </v-card-text>
 
          
-     </base-card>
+     </BaseCard>
 </template>
 <script>
+import BaseCard from "@/components/base/Card";
+
   export default {
+    name: 'cartCard',
     props: {
       cardHoverShadow: {
         type: Boolean,
@@ -158,10 +164,12 @@
       },
       content: Object
     },
+    components: {
+      BaseCard
+    },
     data () {
       return {
         dialog: false,
-        
       }
     },
   }
@@ -177,5 +185,5 @@
     .card-hover-icon {
       display: none;
     }
-  }        
+  }  
 </style>

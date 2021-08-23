@@ -1,0 +1,33 @@
+$primary: #D23F57;
+$primary-lighten: #FCE9EC;
+$secondary-500: #0F3460;
+$white: #fff;
+$gray-100: #F6F9FC;
+$gray-700: #4B566B;
+$body: rgb(246, 249, 252);
+$footer: #BDBDBD;
+
+
+.bg-primary-lighten {
+    background-color: $primary-lighten !important;
+}
+.text-primary-lighten {
+    color: $primary-lighten;
+}
+.bg-body {
+ background-color: $body;
+}
+
+.footer-text {
+    color: $footer;
+}
+
+.border-primary {
+    border: 1px solid $primary !important;
+}
+.border-grey {
+    border: 1px solid rgb(218, 225, 231);
+}
+.bg-white {
+    background-color: #fff;
+}

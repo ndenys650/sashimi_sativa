@@ -25,7 +25,6 @@ export default new Vuex.Store({
     addToCart(state, newCartItem) {
       console.log(newCartItem)
       state.cart.push(newCartItem)
-      
     },
     deleteFromCart(state, id) {
       state.cart = state.cart.filter(cartItem => cartItem.id !== id)

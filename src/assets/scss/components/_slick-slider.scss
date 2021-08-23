@@ -1,0 +1,27 @@
+
+.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+ opacity: 0.5 !important;
+}
+
+.slick-next {
+  &:before {
+   opacity: 0 !important;
+  } 
+  @media (max-width:"992px"){
+    right: 5px !important;
+  }
+  
+}
+
+.slick-prev {
+  position: absolute;
+  z-index: 2;
+  &:before {
+    opacity: 0 !important;
+  }
+  @media (max-width:"992px"){
+    left: 5px !important;
+  }
+
+}
+

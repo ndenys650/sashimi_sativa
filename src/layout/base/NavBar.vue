@@ -135,25 +135,33 @@
                      
                     </v-card>
                   </v-dialog>
-                    <v-badge
-                      bordered
-                      color="error"
-                      :content="this.getCartTotalItems"
-                      :value="this.getCartTotalItems > 0"
-                      overlap
-                      class="ml-4"
+
+
+
+
+                  <v-badge
+                    color="primary"
+                    :content="this.getCartTotalItems"
+                    :value="this.getCartTotalItems > 0"
+                    overlap
+                    dot
+                    tile
+                    class="ml-4"
+                  >
+                    <v-btn
+                      @click="cartDrawer = true"
+                      elevation="0"
+                      fab
+                      color="grey lighten-2"
+                      small
                     >
-                      <v-btn
-                        @click="cartDrawer = true"
-                        elevation="0"
-                        fab
-                        color="grey lighten-2"
-                        small
-                      >
-                        <v-icon color="">mdi-cart</v-icon>
-                      </v-btn>
-                    </v-badge>
+                      <v-icon color="">mdi-cart</v-icon>
+                    </v-btn>
+                  </v-badge>
                     
+
+
+
                 </v-tabs>
                 </div>
             <v-badge
@@ -203,7 +211,7 @@
                 </v-list-item-avatar>
 
                 <v-list-item-content>
-                  <v-list-item-title class="">{{ this.getCartTotalItems }} Items</v-list-item-title>
+                  <v-list-item-title class="">{{ getCartTotalItems }} Items</v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-action>
                   <v-btn
@@ -218,7 +226,7 @@
               <v-divider></v-divider>
               
                 <div 
-                  v-for="(item, index) in this.cart"
+                  v-for="(item, index) in cart"
                   :key="index"
                   style=""
                 >
@@ -276,7 +284,7 @@
             <template v-slot:append>
               <div class="pa-2">
                 <v-btn class="text-capitalize mb-3" block color="primary">
-                  Checkout Now (${{ getCartTotalCost}})
+                  Checkout Now (${{ getCartTotalCost }})
                 </v-btn>
                 <v-btn class="text-cappitalise" outlined block color="primary">
                   View Cart
@@ -317,7 +325,7 @@
 
 <script>
 import {
-    mapMutations,
+    mapMutations, mapGetters, mapState
   } from 'vuex';
 
 export default {
@@ -346,11 +354,6 @@ export default {
           href: 'https://github.com/ndenys650',
           icon: 'mdi-github'
         },
-        // {
-        //   name: 'Instagram',
-        //   href: 'https://www.instagram.com/natedenys/',
-        //   icon: 'mdi-instagram'
-        // },
         {
           name: 'Linkedin',
           href: 'https://www.linkedin.com/in/nathan-denys',
@@ -360,6 +363,8 @@ export default {
     }),
     
     computed: {
+      ...mapGetters(['getCartTotalCost', 'getCartTotalItems']),
+      ...mapState(['cart']),
       homePage() {
         if(this.$route.path == "/" ) {
           return true
@@ -377,8 +382,7 @@ export default {
       },
     },
     methods: {
-      ...mapMutations(['toggleDrawer']),
-      ...mapMutations(['setDrawer']),
+      ...mapMutations(['toggleDrawer', 'setDrawer']),
       onClick (e, item) {
         e.stopPropagation()
 
@@ -404,5 +408,8 @@ export default {
 <style scoped>
 .z-999 {
     z-index: 999;
+  }
+.z-0 {
+    z-index: 0!important;
   }
 </style>
