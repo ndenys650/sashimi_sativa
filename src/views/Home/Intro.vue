@@ -1,28 +1,31 @@
 <template>
   <section>
+
+
       <!-- Section 1 -->
       <v-container fluid>
-          <v-row no-gutters justify="center" align="contain">
+          <v-row no-gutters align="contain">
                 <v-col cols="12" md="6" class="d-flex flex-column">
                     <v-img
                         class=""
                         height="500"
-                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                        src="@/assets/images/sushi/sushi.jpg"
                     >
                     </v-img>
                 </v-col>
                 <v-col cols="12" md="6" class="d-flex flex-column justify-center secondary">
                   
-                    <h1 class="display-1 mx-auto mt-4">
-                        FREE SATIVA IS A TAP AWAY
+                    <h1 class="h3 mx-auto mt-4">
+                        SASHIMI A TAP AWAY
                     </h1>
-                    <h2 class="headline mx-auto my-2">Join now to start earning Rewards.*</h2>
-                    
-
-                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="15%">Join Now</v-btn>                
+                    <h2 class="body-1 mx-auto my-2">Join now to order and start earning Rewards.*</h2>
+                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="20%">Join Now</v-btn>                
                 </v-col>
           </v-row>
       </v-container>
+
+
+
       <v-container fluid>
             <v-row no-gutters align="contain"
                     justify="center"
@@ -30,20 +33,20 @@
             >
               <v-col cols="12" md="6" class="d-flex flex-column order-sm-first justify-center primary">
                   
-                    <h1 class="display-1 mx-auto mt-4">
-                        FREE SASHIMI IS A TAP AWAY
+                    <h1 class="h3 mx-auto mt-4">
+                        SATIVA A TAP AWAY
                     </h1>
-                    <h2 class="headline mx-auto my-2">Join now to start earning Rewards.*</h2>
+                    <h2 class="body-1 mx-auto my-2">Delivery within the hour or your order free.*</h2>
                     
 
-                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="15%">Join Now</v-btn>                
+                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="20%">Order Now</v-btn>                
                 </v-col>
                 <v-col cols="12" md="6" class="d-flex flex-column">
                     
                     <v-img
                         class=""
                         height="500"
-                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                        src="@/assets/images/sushi/can.jpg"
                     >
                     </v-img>
                  
@@ -60,12 +63,12 @@
                     >
                         <v-img
                         height="500"
-                        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                        src="@/assets/images/sushi/indoor.jpg"
                         ></v-img>
 
                         <v-card-text class="secondary">
-                            <h2 class="headline mx-auto my-2 text-center">
-                                Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.
+                            <h2 class="body-1 px-12 my-6 text-center">
+                                Small plates, salads & ramen - enjoy an intimate setting with 12 private indoor seats or patio seating.
                             </h2>
                         </v-card-text>
                     </v-card>
@@ -78,12 +81,12 @@
                     >
                         <v-img
                         height="500"
-                        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                        src="@/assets/images/sushi/dispense.jpg"
                         ></v-img>
 
                         <v-card-text class="secondary">
-                            <h2 class="headline mx-auto my-2 text-center">
-                                Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.
+                            <h2 class="body-1 px-12 my-6 text-center">
+                                Topicals, flowers, & edibles - an upstairs bar-like experience to ease the rest of your night.
                             </h2>
                         </v-card-text>
                     </v-card>

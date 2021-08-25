@@ -6,11 +6,11 @@
 
         <v-col cols="12" lg="12" xl="10">
           <div class="d-flex justify-space-between mb-5">
-            <h2 class="font-weight-bold">Cars</h2>
-            <a href="#" class="text-decoration-none blue-grey--text darken-1">
+            <h2 class="font-weight-bold">Plants</h2>
+            <!-- <a href="#" class="text-decoration-none blue-grey--text darken-1">
               View all
               <v-icon class="m-0 p-0">mdi-menu-right</v-icon>
-            </a>
+            </a> -->
           </div>
 
           <v-row>
@@ -46,11 +46,11 @@
                   alt=""
                 /> -->
               </div>
-              <h4 class="font-600 grey--text text--darken-4 mb-3">
-                Worldwide Delivery
+              <h4 class="font-600 black--text mb-3">
+                Speedy Delivery
               </h4>
               <v-card-subtitle
-                class="text-center grey--text text--darken-2 pt-0"
+                class="text-center grey--text text--darken-4 pt-0"
                 >We offer competitive prices on our 100 million plus product any
                 range.</v-card-subtitle
               >
@@ -70,11 +70,11 @@
                   alt=""
                 /> -->
               </div>
-              <h4 class="font-600 grey--text text--darken-4 mb-3">
+              <h4 class="font-600 black--text mb-3">
                 Safe Payment
               </h4>
               <v-card-subtitle
-                class="text-center grey--text text--darken-2 pt-0"
+                class="text-center grey--text text--darken-4 pt-0"
                 >We offer competitive prices on our 100 million plus product any
                 range.</v-card-subtitle
               >
@@ -94,11 +94,11 @@
                   alt=""
                 /> -->
               </div>
-              <h4 class="font-600 grey--text text--darken-4 mb-3">
+              <h4 class="font-600 black--text mb-3">
                 Shop With Confidence
               </h4>
               <v-card-subtitle
-                class="text-center grey--text text--darken-2 pt-0"
+                class="text-center grey--text text--darken-4 pt-0"
                 >We offer competitive prices on our 100 million plus product any
                 range.</v-card-subtitle
               >
@@ -118,11 +118,11 @@
                   alt=""
                 /> -->
               </div>
-              <h4 class="font-600 grey--text text--darken-4 mb-3">
+              <h4 class="font-600 black--text mb-3">
                 24/7 Support
               </h4>
               <v-card-subtitle
-                class="text-center grey--text text--darken-2 pt-0"
+                class="text-center grey--text text--darken-4 pt-0"
                 >We offer competitive prices on our 100 million plus product any
                 range.</v-card-subtitle
               >

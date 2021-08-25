@@ -20,7 +20,7 @@
               icon
               large
               outlined
-              class="mx-2"
+              class="mx-2 text-decoration-none"
             >
               <v-icon v-text="item.icon" />
           </v-btn>
@@ -33,7 +33,7 @@
               <a href="#" class="text-decoration-none footer-link-hover"> {{ n }}</a>
           </div>
         </v-row>
-        <v-row>
+        <v-row class="text-center text-md-left font-weight-light">
           <v-col
             class="text-center text-md-left font-weight-light"
             cols="12"

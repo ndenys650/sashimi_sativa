@@ -52,29 +52,29 @@ export const themeConfig = {
       },
       themes: {
         light: {
-          primary: "#F16B6F",
-          secondary: "#AACD6E",
-          success: "#33D067",
+          primary: "#e5bb99",
+          secondary: "#93c1ed",
+          success: "#b8d8a7",
           danger: "#FF5353",
           warning: "#FFCD4E",
           info: "#5e5ce6",
           dark: "#3E4348",
           black: "#242939",
           white: "#fff",
-          background: "#C5C6B6",
+          background: "#a9dbbd",
           color: "#0F3460",
           grey: "#F8F8FF"
         },
         dark: {
-          primary: "#F16B6F",
-          secondary: "#AACD6E",
-          success: "#33D067",
+          primary: "#e5bb99",
+          secondary: "#93c1ed",
+          success: "#b8d8a7",
           danger: "#FF5353",
           warning: "#FFCD4E",
           info: "#5e5ce6",
           dark: "#3E4348",
           white: "#fff",
-          background: "#C5C6B6",
+          background: "#a9dbbd",
           color: "#fff",
           grey: "#F8F8FF"
         }

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import products from "@/data/product-database";
+import products from "@/data/product-database"
 
 
 Vue.use(Vuex)
@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     drawer: false,
     products: products,
-    cart: [], 
+    cart: [],
 
   },
   getters: {

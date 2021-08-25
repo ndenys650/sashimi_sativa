@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Find</h1>
+    <h1>Find A Store Route</h1>
   </section>
 </template>
 

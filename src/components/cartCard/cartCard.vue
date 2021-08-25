@@ -6,7 +6,7 @@
             color="primary"
             small
           >
-            56% off
+            {{ Math.floor(this.discountPrice * 100) }}% off
           </v-chip>
           <div class="card-hover-icon">
             <div class="d-flex flex-column p-absolute right-0 z-1 mr-2 mt-1 card-hover-icon">
@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="font-weight-bold primary--text mb-2">$250.00</h2>
+                                    <h2 class="font-weight-bold primary--text mb-2">{{ discountedPrice | toCurrency() }}</h2>
                                     <h5 class=" font-weight-light mb-3">Stock Available</h5>
                                     <h5 class="grey--text text--darken-5 mb-3">Sold By: <span class="grey--text text--darken-1 font-weight-medium ml-2">Mobile Store</span></h5>
                                 </v-col>
@@ -118,8 +118,8 @@
               </div>
               <div class="d-flex">
               
-                <h6 class="primary--text mr-2 mb-0">${{ content.price }}</h6>
-                <h6 class="gray--text lighten-4 text-decoration-line-through mb-0">${{ content.price }}</h6>
+                <h6 class="primary--text mr-2 mb-0">{{ discountedPrice | toCurrency() }}</h6>
+                <h6 class="gray--text lighten-4 text-decoration-line-through mb-0">{{ content.price | toCurrency() }}</h6>
               </div>
             </div>
             
@@ -167,9 +167,26 @@ import BaseCard from "@/components/base/Card";
     components: {
       BaseCard
     },
+    computed: {
+      discountedPrice() {
+        let val = this.content.price * this.discountPrice
+        return val.toFixed(2);
+      }
+    },
+    filters: {
+      toCurrency(amount) {
+        var formatter = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        });
+
+        return formatter.format(amount)
+      }
+    },
     data () {
       return {
         dialog: false,
+        discountPrice: .56
       }
     },
   }

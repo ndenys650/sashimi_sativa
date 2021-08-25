@@ -5,19 +5,19 @@
                     <v-img
                         class=""
                         height="300"
-                        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                        src="@/assets/images/sushi/service.jpg"
                     >
                     </v-img>
                 </v-col>
                 <v-col cols="12" md="6" class="d-flex flex-column justify-center">
                   
-                    <h1 class="display-1 mx-auto mt-4 text-center">
-                        50 years of serving communities
+                    <h1 class="h3 mx-auto mt-4 text-center">
+                        Serving our Communities
                     </h1>
-                    <h2 class="headline mx-auto my-2 text-center">From the beginning, Starbucks has been about more than just coffee. See how our partners (employees) and customers strengthen our local communities.</h2>
+                    <h3 class="body-1 mx-auto my-2 text-center">From the beginning, we've been about more than just sashimi and sativa. See how our partners (employees) and customers strengthen our local communities.</h3>
                     
 
-                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="15%">Learn More</v-btn>                
+                    <v-btn class="mx-auto mb-5 mt-3" outlined rounded width="20%">Learn More</v-btn>                
                 </v-col>
           </v-row>
         <v-spacer />

@@ -9,22 +9,30 @@
             height="80"
         >
             <v-container class="mx-auto py-0">
-            <v-row align="center">
-                <router-link to="/">
+            <v-row align="center" class="">
+                <router-link to="/" class="d-flex flex-row">
                 <v-img
-                    :src="require('@/assets/logo.svg')"
-                    class="mr-5"
+                    :src="require('@/assets/logo2.svg')"
+                    class="mr-3"
                     contain
-                    height="48"
-                    width="48"
-                    max-width="48"
+                    height="60"
+                    width="60"
+                    max-width="60"
+                    @click="$vuetify.goTo(0)"
+                />
+                <v-img
+                    :src="require('@/assets/name.svg')"
+                    contain
+                    height="60"
+                    width="60"
+                    max-width="60"
                     @click="$vuetify.goTo(0)"
                 />
                 </router-link>
                
                 <v-spacer></v-spacer>
 
-                <div>
+                <div class="d-flex flex-row">
                 <v-tabs
                     class="hidden-sm-and-down chevron"
                     optional
@@ -44,129 +52,129 @@
 
                     {{ name.title }}
                     </v-tab>
-                    <v-dialog
-                    v-model="dialog"
-                    width="500"
-                  >
-                    <template v-slot:activator="{ on, attrs }">
+                    
+                      
+
+
+
+                  </v-tabs>
+                  <v-dialog
+                      v-model="dialog"
+                      width="500"
+                    >
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                          elevation="0"
+                          fab
+                          small
+                          class="ml-4"
+                          color="grey lighten-2"
+                          v-bind="attrs"
+                          v-on="on"
+                        >
+                          <v-icon>mdi-account</v-icon>
+                        </v-btn>
+                      </template>
+
+                      <v-card>
+                        <div class="content px-10 pt-10">
+                          <div class="d-flex flex-column text-center justify-center">
+                            <h3 class="mb-2">Welcome To SaSa!</h3>
+                            <h5 class="text-sm grey--text text--darken-2 font-600 mb-8">Log in with email & password</h5>
+                          </div>
+
+                          <p class="text-14 mb-2">Email Or Phone Number</p>
+                          <v-text-field
+                              placeholder="example@mail.com"
+                              outlined
+                              dense
+                              hide-details=""
+                              class="mb-4"
+                          ></v-text-field>
+                          <p class="text-14 mb-2">Password</p>
+                          <v-text-field
+                              type="password"
+                              placeholder="*******"
+                              outlined
+                              dense
+                              hide-details=""
+                              class="mb-8"
+                          ></v-text-field>
+
+                          <v-btn
+                            color="primary"
+                            class="text-capitalize font-600 mb-4 py-5"
+                            block
+                          >
+                            Login
+                          </v-btn>
+                          <v-row>
+                            <v-col cols="12" lg="6" class="mx-auto">
+                              <div class="d-flex align-center mb-4">
+                                <v-divider></v-divider>
+                                <span class="mx-3 text-16 grey--text text--darken-1 mb-1">on</span>
+                                <v-divider></v-divider>
+                              </div>
+                              
+                            </v-col>
+                          </v-row>
+                          <v-btn 
+                            color="indigo"
+                            class="text-capitalize font-600 white--text mb-4 py-5"
+                            block
+                          >
+                            <v-icon left>mdi-facebook</v-icon>
+                            Continue with Facebook
+                          </v-btn>
+                          <v-btn 
+                            color="blue"
+                            class="text-capitalize font-600 white--text mb-0 py-5"
+                            block
+                          >
+                            <v-icon left>mdi-google</v-icon>
+                            Continue with Google
+                          </v-btn>
+
+                          
+                          
+                        </div>
+                        <div class="text-center my-5">
+                            <span class="grey--text text--darken-1">Don't have account ? <a href="#" class="ms-2 grey--text text--darken-4 font-600">Sign Up</a> </span>
+                          </div>
+                        <div class="py-4 grey lighten-2">
+                            <div class="text-center">
+                              <span class="grey--text text--darken-1">Forgot your password ? <a href="#" class="ms-2 grey--text text--darken-4 font-600">Reset It</a> </span>
+                            </div>
+                        </div>
+                      
+                      </v-card>
+                    </v-dialog>
+
+
+
+
+                    <v-badge
+                      bordered
+                      color="primary"
+                      :content="this.getCartTotalItems"
+                      :value="this.getCartTotalItems > 0"
+                      overlap
+                      class="ml-4"
+                    >
                       <v-btn
+                        @click="cartDrawer = true"
                         elevation="0"
                         fab
-                        small
-                        class="ml-4"
                         color="grey lighten-2"
-                        v-bind="attrs"
-                        v-on="on"
+                        small
                       >
-                        <v-icon>mdi-account</v-icon>
+                        <v-icon color="">mdi-cart</v-icon>
                       </v-btn>
-                    </template>
-
-                    <v-card>
-                      <div class="content px-10 pt-10">
-                        <div class="d-flex flex-column text-center justify-center">
-                          <h3 class="mb-2">Welcome To Ecommerce</h3>
-                          <h5 class="text-sm grey--text text--darken-2 font-600 mb-8">Log in with email & password</h5>
-                        </div>
-
-                        <p class="text-14 mb-2">Email Or Phone Number</p>
-                        <v-text-field
-                            placeholder="example@mail.com"
-                            outlined
-                            dense
-                            hide-details=""
-                            class="mb-4"
-                        ></v-text-field>
-                        <p class="text-14 mb-2">Password</p>
-                        <v-text-field
-                            type="password"
-                            placeholder="*******"
-                            outlined
-                            dense
-                            hide-details=""
-                            class="mb-8"
-                        ></v-text-field>
-
-                        <v-btn
-                          color="primary"
-                          class="text-capitalize font-600 mb-4 py-5"
-                          block
-                        >
-                           Login
-                        </v-btn>
-                        <v-row>
-                          <v-col cols="12" lg="6" class="mx-auto">
-                            <div class="d-flex align-center mb-4">
-                              <v-divider></v-divider>
-                              <span class="mx-3 text-16 grey--text text--darken-1 mb-1">on</span>
-                              <v-divider></v-divider>
-                            </div>
-                            
-                          </v-col>
-                        </v-row>
-                        <v-btn 
-                          color="indigo"
-                          class="text-capitalize font-600 white--text mb-4 py-5"
-                          block
-                        >
-                          <v-icon left>mdi-facebook</v-icon>
-                          Continue with Facebook
-                        </v-btn>
-                        <v-btn 
-                          color="blue"
-                          class="text-capitalize font-600 white--text mb-0 py-5"
-                          block
-                        >
-                          <v-icon left>mdi-google</v-icon>
-                          Continue with Google
-                        </v-btn>
-
-                        
-                        
-                      </div>
-                      <div class="text-center my-5">
-                          <span class="grey--text text--darken-1">Don't have account ? <a href="#" class="ms-2 grey--text text--darken-4 font-600">Sign Up</a> </span>
-                        </div>
-                      <div class="py-4 grey lighten-2">
-                          <div class="text-center">
-                            <span class="grey--text text--darken-1">Forgot your password ? <a href="#" class="ms-2 grey--text text--darken-4 font-600">Reset It</a> </span>
-                          </div>
-                      </div>
-                     
-                    </v-card>
-                  </v-dialog>
-
-
-
-
-                  <v-badge
-                    color="primary"
-                    :content="this.getCartTotalItems"
-                    :value="this.getCartTotalItems > 0"
-                    overlap
-                    dot
-                    tile
-                    class="ml-4"
-                  >
-                    <v-btn
-                      @click="cartDrawer = true"
-                      elevation="0"
-                      fab
-                      color="grey lighten-2"
-                      small
-                    >
-                      <v-icon color="">mdi-cart</v-icon>
-                    </v-btn>
-                  </v-badge>
-                    
-
-
-
-                </v-tabs>
+                    </v-badge>
                 </div>
             <v-badge
               bordered
-              color="error"
+              color="primary"
               :content="this.getCartTotalItems"
               :value="this.getCartTotalItems > 0"
               overlap
@@ -267,8 +275,8 @@
                     </v-avatar>
                     <div class="col-5">
                       <h5 class="text-truncate">{{ item.title }}</h5>
-                      <p class="text-tiny">${{ item.price }} x {{ item.quantity }}</p>
-                      <h5 class="primary--text">${{ item.price * item.quantity }}</h5>
+                      <p class="text-tiny">{{ item.price | toCurrency() }} x {{ item.quantity }}</p>
+                      <h5 class="primary--text">{{ item.price * item.quantity  | toCurrency() }}</h5>
                     </div>
                     <v-btn
                       icon
@@ -284,11 +292,11 @@
             <template v-slot:append>
               <div class="pa-2">
                 <v-btn class="text-capitalize mb-3" block color="primary">
-                  Checkout Now (${{ getCartTotalCost }})
+                  Checkout Now ({{ getCartTotalCost | toCurrency()  }})
                 </v-btn>
-                <v-btn class="text-cappitalise" outlined block color="primary">
+                <!-- <v-btn class="text-cappitalise" outlined block color="primary">
                   View Cart
-                </v-btn>
+                </v-btn> -->
               </div>
             </template>
 
@@ -380,6 +388,16 @@ export default {
           this.setDrawer(val)
         },
       },
+    },
+    filters: {
+      toCurrency(amount) {
+        var formatter = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        });
+
+        return formatter.format(amount)
+      }
     },
     methods: {
       ...mapMutations(['toggleDrawer', 'setDrawer']),
